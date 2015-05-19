@@ -7,40 +7,27 @@
 //
 
 #include <iostream>
-//#include "Matrice.h"
+#include "Matrice.h"
 
 using namespace std;
 
 int main()
 {
-    cout << "Hello World!" << endl;
+    cout << "Projet Matrice" << endl;
     
-    Matrice Une(15,15);
-    Matrice Deux(15,15);
+    Matrice matrice1(100,100); // nombre ligne et colonne première matrice
+    Matrice matrice2(100,100); // idem avec la deuxième matrice
     
+    matrice1.Affichage(); // affichage de la première matrice
+    matrice2.Affichage("MATRICE.txt"); // affichage de la seconde matrice et stockage dans un fichier texte
     
-    Une.display();
-    
-    Deux.display("Matrice2.txt");
-    
-    for (int i = 0 ; i < 20 ; i++ )
+    for (int i=0; i<120; i++)
     {
-        cout << i << " " << Une.getValue(i,2) << endl;
+        cout << i << "   " << matrice1.getValue(i,2) << endl; //
     }
     
-    //    vector < pair < int, int > > coordinate ;
-    //    coordinate = Une.getCoordinates(1) ;
-    //    for ( int i = 0 ; i < coordinate.size() ; i++ )
-    //    {
-    //        cout << "Ligne : " << coordinate[i].second << "    Colonne : " << coordinate[i].first << endl ;
-    //    }
-    //    cout << coordinate.size() ;
-    
-    Une += Deux ;
-    
-    Une.display("MatriceAdd.txt");
-    
-    
+    matrice1 += matrice2;// opération entre la matrice 1 et la matrice 2
+    matrice1.Affichage("MATRICE_ADD.txt"); // résultat sotcké dans un autre fichier texte
     
     return 0;
 }
