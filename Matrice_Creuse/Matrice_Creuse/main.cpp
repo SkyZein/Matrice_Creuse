@@ -15,8 +15,8 @@ int main()
 {
     cout << "Hello World!" << endl;
     
-    Matrix Une(15,15);
-    Matrix Deux(15,15);
+    Matrice Une(15,15);
+    Matrice Deux(15,15);
     
     
     Une.display();
